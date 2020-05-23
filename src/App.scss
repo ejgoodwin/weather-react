@@ -1,0 +1,113 @@
+$peach: #ED9393;
+$white: #fff;
+$grey: #B8B0C1;
+$font-color: #936D6D;
+$error-background: #a24848;
+
+html,
+body {
+	height: 100%;
+}
+* {
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+#root {
+	height: 100%;	
+}
+.app {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	padding: .75rem;
+	height: 100%;
+}
+.app-title {
+	text-align: center;
+}
+.main-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	margin-bottom: 1rem;
+}
+h1,
+h2 {
+	margin-top: 0;
+}
+body {
+	background: $peach;
+	color: $white;
+}
+.weather-form {
+	&__label {
+		display: block;
+		margin-bottom: .5rem;
+	}
+	&__input-container {
+		display: flex;
+	}
+	&__input,
+	&__submit {
+		padding: .5rem .75rem;
+		border: none;
+		background-color: rgba($white, .5);
+	}
+	&__input {
+		flex-grow: 1;
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+		color: $font-color;
+	}
+	&__submit {
+		border-top-right-radius: 30px;
+		border-bottom-right-radius: 30px;
+		color: rgba($font-color, .6);
+	}
+}
+.card-container {
+  display: flex;
+  // flex-wrap: wrap;
+}
+
+.card {
+  flex-grow: 1;
+  text-align: center;
+  padding: .25rem;
+  margin: .25rem;
+  background: rgba($white, .3);
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px rgba(#000, .1);
+}
+
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+.weather-today {
+	&__today {
+		font-size: .75rem;
+		color: rgba($white, .5);
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	&__text {
+		margin: .2rem 0;
+		font-weight: 700;
+		&--capitalize {
+			text-transform: capitalize;
+		}
+	}
+}
+.error-message {
+	flex-grow: 1;
+	&__text {
+		padding: .5rem;
+		background: $error-background;
+		border-radius: 4px;
+		text-align: center;
+	}
+}
