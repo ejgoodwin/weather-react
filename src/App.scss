@@ -24,6 +24,14 @@ body {
 }
 .app-title {
 	text-align: center;
+	transition: .2s;
+	&.app-start {
+		font-size: 3.125rem
+	}
+	&.app-in-use {
+		margin-bottom: .5rem;
+		font-size: 2rem;
+	}
 }
 .main-container {
 	display: flex;
@@ -41,9 +49,24 @@ body {
 	color: $white;
 }
 .weather-form {
+	transition: .2s;
+	&.app-start {
+		.weather-form__input {
+			font-size: 1.5rem;
+		}
+	}
+	&.app-in-use {
+		.weather-form__input {
+			font-size: 1rem;
+		}
+		.weather-form__label {
+			display: none;
+		}
+	}
 	&__label {
 		display: block;
 		margin-bottom: .5rem;
+		font-weight: 700;
 	}
 	&__input-container {
 		display: flex;

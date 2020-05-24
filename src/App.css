@@ -23,7 +23,13 @@ body {
   height: 100%; }
 
 .app-title {
-  text-align: center; }
+  text-align: center;
+  transition: .2s; }
+  .app-title.app-start {
+    font-size: 3.125rem; }
+  .app-title.app-in-use {
+    margin-bottom: .5rem;
+    font-size: 2rem; }
 
 .main-container {
   display: -webkit-flex;
@@ -48,32 +54,37 @@ body {
   background: #ED9393;
   color: #fff; }
 
-.weather-form__label {
-  display: block;
-  margin-bottom: .5rem; }
-
-.weather-form__input-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-
-.weather-form__input, .weather-form__submit {
-  padding: .5rem .75rem;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.5); }
-
-.weather-form__input {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  color: #936D6D; }
-
-.weather-form__submit {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  color: rgba(147, 109, 109, 0.6); }
+.weather-form {
+  transition: .2s; }
+  .weather-form.app-start .weather-form__input {
+    font-size: 1.5rem; }
+  .weather-form.app-in-use .weather-form__input {
+    font-size: 1rem; }
+  .weather-form.app-in-use .weather-form__label {
+    display: none; }
+  .weather-form__label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 700; }
+  .weather-form__input-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .weather-form__input, .weather-form__submit {
+    padding: .5rem .75rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .weather-form__input {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: #936D6D; }
+  .weather-form__submit {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: rgba(147, 109, 109, 0.6); }
 
 .card-container {
   display: -webkit-flex;
