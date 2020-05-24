@@ -17,6 +17,7 @@ class  App extends React.Component {
 			dailyData: [],
 			inputValue: "",
 			city: "",
+			country: "",
 			errorVisible: false,
 			headerInputClass: "app-start"
 		}
@@ -40,7 +41,8 @@ class  App extends React.Component {
 				console.log(data);
 				this.setState({
 					fullData: data.list,
-					dailyData: dailyData
+					dailyData: dailyData,
+					country: data.city.country
 				}, () => console.log(this.state))
 			})
 			.catch(error => {
@@ -76,7 +78,7 @@ class  App extends React.Component {
 			    		headerInputClass={this.state.headerInputClass}
 			    		/>
 
-			    	{this.state.dailyData.length > 0 ? <WeatherToday reading={this.state.dailyData[0]} city={this.state.city} /> : ""}
+			    	{this.state.dailyData.length > 0 ? <WeatherToday reading={this.state.dailyData[0]} city={this.state.city} country={this.state.country} /> : ""}
 			   
 		    		<div className="card-container">
 		    			<WeatherForecast forecast={this.state.dailyData.slice(1)}  />
