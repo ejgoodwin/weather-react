@@ -1,8 +1,10 @@
 $peach: #ED9393;
 $white: #fff;
 $grey: #B8B0C1;
-$font-color: #936D6D;
 $error-background: #a24848;
+$card-color: #647C95;
+
+$sunny: #6CDDFF;
 
 html,
 body {
@@ -10,17 +12,60 @@ body {
 }
 * {
 	box-sizing: border-box;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Manrope', sans-serif;
 }
 #root {
 	height: 100%;	
 }
 .app {
+	position: relative;
 	display: flex;
     flex-direction: column;
     justify-content: space-between;
 	padding: .75rem;
 	height: 100%;
+	background: rgb(171,135,253);
+	background: linear-gradient(0deg, rgba(171,135,253,1) 0%, rgba(145,154,255,1) 61%);
+	background-size: cover;
+	background-position: center;
+	&[class^="weather-2"] {
+		background-image: url('images/bg-thunder.svg');
+	}
+	&[class^="weather-3"] {
+		background-image: url('images/bg-rain.svg');
+	}
+	&[class^="weather-5"] {
+		background-image: url('images/bg-rain.svg');
+	}
+	&[class^="weather-6"] {
+		background-image: url('images/bg-cloudy.svg');
+	}
+	&[class^="weather-7"] {
+		background-image: url('images/bg-cloudy.svg');
+	}
+	&[class^="weather-8"] {
+		background-image: url('images/bg-cloudy.svg');
+	}
+	&.weather-800 {
+		background-image: url('images/bg-sunny.svg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	.app-background {
+		display: none;
+	}
+}
+.app-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background:  url('images/bg-3.svg') no-repeat;
+	background-size: cover;
+	opacity: .7;
+	z-index: 0;
 }
 .app-title {
 	text-align: center;
@@ -37,15 +82,20 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	flex-grow: 1;
+	flex-grow: 1;	
 	margin-bottom: 1rem;
+	z-index: 1;
+	@media screen and (min-width: 620px) {
+		width: 600px;
+		margin: 0 auto 1rem;
+	}
 }
 h1,
 h2 {
 	margin-top: 0;
 }
 body {
-	background: $peach;
+	// background: $peach;
 	color: $white;
 }
 .weather-form {
@@ -81,12 +131,11 @@ body {
 		flex-grow: 1;
 		border-top-left-radius: 30px;
 		border-bottom-left-radius: 30px;
-		color: $font-color;
 	}
 	&__submit {
 		border-top-right-radius: 30px;
 		border-bottom-right-radius: 30px;
-		color: rgba($font-color, .6);
+		color: rgba(#000, .4);
 	}
 }
 .card-container {
@@ -95,13 +144,43 @@ body {
 }
 
 .card {
-  flex-grow: 1;
-  text-align: center;
-  padding: .25rem;
-  margin: .25rem;
-  background: rgba($white, .3);
-  border-radius: 4px;
-  box-shadow: 0px 3px 6px rgba(#000, .1);
+	flex-grow: 1;
+	padding: .25rem;
+	margin: .25rem;
+	width: 25%;
+	text-align: center;
+	background: rgba($card-color, .3);
+	border-radius: 4px;
+	box-shadow: 0px 3px 6px rgba(#000, .1);
+	&__description {
+		font-size: .75rem;
+	}
+	&__icon {
+		width: 100%;
+		height: 40px;
+		margin: .5rem 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: top;
+		&[class^="icon-2"] {
+			background-image: url('images/icons/200.svg');
+		}
+		&[class^="icon-3"],
+		&[class^="icon-5"],
+		&[class^="icon-6"] {
+			background-image: url('images/icons/300.svg');
+		}
+		&[class^="icon-7"] {
+			background-image: url('images/icons/801.svg');
+		}
+		&[class^="icon-8"] {
+			background-image: url('images/icons/801.svg');
+		}
+		&.icon-800 {
+			background-image: url('images/icons/800.svg');
+		}
+	}
+
 }
 
 .show {
@@ -111,6 +190,18 @@ body {
 	display: none;
 }
 .weather-today {
+	display: flex;
+	flex-grow: 1;
+	&__text-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 50%;
+	}
+	&__icon {
+		padding-top: 3rem;
+		width: 50%;
+	}
 	&__today {
 		font-size: .75rem;
 		color: rgba($white, .5);
@@ -134,3 +225,30 @@ body {
 		text-align: center;
 	}
 }
+
+.custom-icon {
+	height: 120px;
+	width: 150px;
+	margin-left: auto;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top;
+	&[class^="icon-2"] {
+		background-image: url('images/icons/200.svg');
+	}
+	&[class^="icon-3"],
+	&[class^="icon-5"],
+	&[class^="icon-6"] {
+		background-image: url('images/icons/300.svg');
+	}
+	&[class^="icon-7"] {
+		background-image: url('images/icons/801.svg');
+	}
+	&[class^="icon-8"] {
+		background-image: url('images/icons/801.svg');
+	}
+	&.icon-800 {
+		background-image: url('images/icons/800.svg');
+	}
+}
+
