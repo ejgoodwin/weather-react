@@ -4,12 +4,13 @@ body {
 
 * {
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif; }
+  font-family: 'Manrope', sans-serif; }
 
 #root {
   height: 100%; }
 
 .app {
+  position: relative;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +21,40 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: .75rem;
-  height: 100%; }
+  height: 100%;
+  background: #ab87fd;
+  background: linear-gradient(0deg, #ab87fd 0%, #919aff 61%);
+  background-size: cover;
+  background-position: center; }
+  .app[class^="weather-2"] {
+    background-image: url("images/bg-thunder.svg"); }
+  .app[class^="weather-3"] {
+    background-image: url("images/bg-rain.svg"); }
+  .app[class^="weather-5"] {
+    background-image: url("images/bg-rain.svg"); }
+  .app[class^="weather-6"] {
+    background-image: url("images/bg-cloudy.svg"); }
+  .app[class^="weather-7"] {
+    background-image: url("images/bg-cloudy.svg"); }
+  .app[class^="weather-8"] {
+    background-image: url("images/bg-cloudy.svg"); }
+  .app.weather-800 {
+    background-image: url("images/bg-sunny.svg");
+    background-size: cover;
+    background-position: center; }
+  .app .app-background {
+    display: none; }
+
+.app-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/bg-3.svg") no-repeat;
+  background-size: cover;
+  opacity: .7;
+  z-index: 0; }
 
 .app-title {
   text-align: center;
@@ -44,14 +78,18 @@ body {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  z-index: 1; }
+  @media screen and (min-width: 620px) {
+    .main-container {
+      width: 600px;
+      margin: 0 auto 1rem; } }
 
 h1,
 h2 {
   margin-top: 0; }
 
 body {
-  background: #ED9393;
   color: #fff; }
 
 .weather-form {
@@ -79,12 +117,11 @@ body {
     -ms-flex-positive: 1;
     flex-grow: 1;
     border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    color: #936D6D; }
+    border-bottom-left-radius: 30px; }
   .weather-form__submit {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    color: rgba(147, 109, 109, 0.6); }
+    color: rgba(0, 0, 0, 0.4); }
 
 .card-container {
   display: -webkit-flex;
@@ -95,12 +132,32 @@ body {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  text-align: center;
   padding: .25rem;
   margin: .25rem;
-  background: rgba(255, 255, 255, 0.3);
+  width: 25%;
+  text-align: center;
+  background: rgba(100, 124, 149, 0.3);
   border-radius: 4px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); }
+  .card__description {
+    font-size: .75rem; }
+  .card__icon {
+    width: 100%;
+    height: 40px;
+    margin: .5rem 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top; }
+    .card__icon[class^="icon-2"] {
+      background-image: url("images/icons/200.svg"); }
+    .card__icon[class^="icon-3"], .card__icon[class^="icon-5"], .card__icon[class^="icon-6"] {
+      background-image: url("images/icons/300.svg"); }
+    .card__icon[class^="icon-7"] {
+      background-image: url("images/icons/801.svg"); }
+    .card__icon[class^="icon-8"] {
+      background-image: url("images/icons/801.svg"); }
+    .card__icon.icon-800 {
+      background-image: url("images/icons/800.svg"); }
 
 .show {
   display: block; }
@@ -108,17 +165,37 @@ body {
 .hide {
   display: none; }
 
-.weather-today__today {
-  font-size: .75rem;
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-  font-weight: 700; }
-
-.weather-today__text {
-  margin: .2rem 0;
-  font-weight: 700; }
-  .weather-today__text--capitalize {
-    text-transform: capitalize; }
+.weather-today {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+  .weather-today__text-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 50%; }
+  .weather-today__icon {
+    padding-top: 3rem;
+    width: 50%; }
+  .weather-today__today {
+    font-size: .75rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-weight: 700; }
+  .weather-today__text {
+    margin: .2rem 0;
+    font-weight: 700; }
+    .weather-today__text--capitalize {
+      text-transform: capitalize; }
 
 .error-message {
   -webkit-flex-grow: 1;
@@ -129,3 +206,21 @@ body {
     background: #a24848;
     border-radius: 4px;
     text-align: center; }
+
+.custom-icon {
+  height: 120px;
+  width: 150px;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top; }
+  .custom-icon[class^="icon-2"] {
+    background-image: url("images/icons/200.svg"); }
+  .custom-icon[class^="icon-3"], .custom-icon[class^="icon-5"], .custom-icon[class^="icon-6"] {
+    background-image: url("images/icons/300.svg"); }
+  .custom-icon[class^="icon-7"] {
+    background-image: url("images/icons/801.svg"); }
+  .custom-icon[class^="icon-8"] {
+    background-image: url("images/icons/801.svg"); }
+  .custom-icon.icon-800 {
+    background-image: url("images/icons/800.svg"); }

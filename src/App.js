@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import weatherApiKey from './apiKeys.js';
 import SearchForm from './components/SearchForm.js';
 import WeatherToday from './components/WeatherToday.js';
 import WeatherForecast from './components/WeatherForecast.js';
-import DayCard from './components/DayCard.js';
 import ErrorMessage from './components/ErrorMessage.js';
 
 class  App extends React.Component {
@@ -19,7 +17,8 @@ class  App extends React.Component {
 			city: "",
 			country: "",
 			errorVisible: false,
-			headerInputClass: "app-start"
+			headerInputClass: "app-start",
+			backgroundClass: ""
 		}
 	}
 
@@ -37,12 +36,17 @@ class  App extends React.Component {
 		fetch(weatherURL)
 			.then(res => res.json())
 			.then(data => {
-				const dailyData = data.list.filter(reading => reading.dt_txt.includes("03:00:00"))
+				const dailyData = data.list.filter(reading => reading.dt_txt.includes("12:00:00"));
 				console.log(data);
 				this.setState({
 					fullData: data.list,
 					dailyData: dailyData,
-					country: data.city.country
+					country: data.city.country,
+					backgroundClass: dailyData[0].weather[0].id,
+					city: this.state.value,
+					errorVisible: false,
+					value: "",
+					headerInputClass: "app-in-use"
 				}, () => console.log(this.state))
 			})
 			.catch(error => {
@@ -53,19 +57,12 @@ class  App extends React.Component {
 					dailyData: []
 				})
 			}) 
-		
-		// Set state of city for the h2 title
-		this.setState({
-			city: this.state.value,
-			errorVisible: false,
-			value: "",
-			headerInputClass: "app-in-use"
-		});
 	}
 
 	render() {
 		return (
-		  	<div className="app">
+		  	<div className={`weather-${this.state.backgroundClass} app`}>
+		  		<div className="app-background"></div>
 			    <header>
 			      <h1 className={`app-title ${this.state.headerInputClass}`}>Weather</h1>
 			    </header>
