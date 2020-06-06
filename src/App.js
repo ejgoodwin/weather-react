@@ -21,7 +21,8 @@ class  App extends React.Component {
 			backgroundClass: "",
 			lat: "",
 			lon: "",
-			weatherCurrent: ""
+			weatherCurrent: "",
+			timezoneOffset: ""
 		}
 	}
 
@@ -64,7 +65,8 @@ class  App extends React.Component {
 					value: "",
 					headerInputClass: "app-in-use",
 					weatherCurrent: data.current,
-					dailyData: data.daily
+					dailyData: data.daily,
+					timezoneOffset: data.timezone_offset
 				}, () => console.log(this.state))
 			})
 			.catch(error => {
@@ -103,7 +105,7 @@ class  App extends React.Component {
 			    	{this.state.dailyData.length > 0 ? <WeatherToday reading={this.state.weatherCurrent} city={this.state.city} country={this.state.country} /> : ""}
 			   
 		    		<div className="card-container">
-		    			<WeatherForecast forecast={this.state.dailyData.slice(1,5)}  />
+		    			<WeatherForecast forecast={this.state.dailyData.slice(1,5)} timezoneOffset={this.state.timezoneOffset}  />
 		    		</div>
 
 		    		<ErrorMessage errorVisible={this.state.errorVisible} />
