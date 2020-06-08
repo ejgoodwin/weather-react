@@ -3,7 +3,6 @@ $white: #fff;
 $grey: #B8B0C1;
 $error-background: #a24848;
 $card-color: #647C95;
-
 $sunny: #6CDDFF;
 
 html,
@@ -13,6 +12,13 @@ body {
 * {
 	box-sizing: border-box;
 	font-family: 'Manrope', sans-serif;
+}
+h1,
+h2 {
+	margin-top: 0;
+}
+body {
+	color: $white;
 }
 #root {
 	height: 100%;	
@@ -51,21 +57,6 @@ body {
 		background-size: cover;
 		background-position: center;
 	}
-
-	.app-background {
-		display: none;
-	}
-}
-.app-background {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background:  url('images/bg-3.svg') no-repeat;
-	background-size: cover;
-	opacity: .7;
-	z-index: 0;
 }
 .app-title {
 	text-align: center;
@@ -89,14 +80,6 @@ body {
 		width: 600px;
 		margin: 0 auto 1rem;
 	}
-}
-h1,
-h2 {
-	margin-top: 0;
-}
-body {
-	// background: $peach;
-	color: $white;
 }
 .weather-form {
 	transition: .2s;
@@ -138,11 +121,10 @@ body {
 		color: rgba(#000, .4);
 	}
 }
+
 .card-container {
   display: flex;
-  // flex-wrap: wrap;
 }
-
 .card {
 	flex-grow: 1;
 	padding: .25rem;
@@ -152,6 +134,12 @@ body {
 	background: rgba($card-color, .3);
 	border-radius: 4px;
 	box-shadow: 0px 3px 6px rgba(#000, .1);
+	&__day {
+		font-size: .75rem;
+		color: rgba($white, .5);
+		text-transform: uppercase;
+		font-weight: 700;
+	}
 	&__description {
 		font-size: .75rem;
 	}
@@ -162,25 +150,36 @@ body {
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: top;
-		&[class^="icon-2"] {
-			background-image: url('images/icons/200.svg');
-		}
-		&[class^="icon-3"],
-		&[class^="icon-5"],
-		&[class^="icon-6"] {
-			background-image: url('images/icons/300.svg');
-		}
-		&[class^="icon-7"] {
-			background-image: url('images/icons/801.svg');
-		}
-		&[class^="icon-8"] {
-			background-image: url('images/icons/801.svg');
-		}
-		&.icon-800 {
-			background-image: url('images/icons/800.svg');
-		}
 	}
-
+}
+.custom-icon {
+	height: 120px;
+	width: 150px;
+	margin-left: auto;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top;
+}
+// Icons
+[class^="icon-2"] {
+	background-image: url('images/icons/200.svg');
+}
+[class^="icon-3"],
+[class^="icon-5"],
+[class^="icon-6"] {
+	background-image: url('images/icons/300.svg');
+}
+[class^="icon-7"] {
+	background-image: url('images/icons/801.svg');
+}
+[class^="icon-8"] {
+	background-image: url('images/icons/801.svg');
+}
+.icon-800 {
+	background-image: url('images/icons/800.svg');
+}
+.icon-804 {
+	background-image: url('images/icons/804.svg');
 }
 
 .show {
@@ -226,29 +225,5 @@ body {
 	}
 }
 
-.custom-icon {
-	height: 120px;
-	width: 150px;
-	margin-left: auto;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: top;
-	&[class^="icon-2"] {
-		background-image: url('images/icons/200.svg');
-	}
-	&[class^="icon-3"],
-	&[class^="icon-5"],
-	&[class^="icon-6"] {
-		background-image: url('images/icons/300.svg');
-	}
-	&[class^="icon-7"] {
-		background-image: url('images/icons/801.svg');
-	}
-	&[class^="icon-8"] {
-		background-image: url('images/icons/801.svg');
-	}
-	&.icon-800 {
-		background-image: url('images/icons/800.svg');
-	}
-}
+
 

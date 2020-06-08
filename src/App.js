@@ -11,58 +11,79 @@ class  App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			fullData: [],
 			dailyData: [],
-			inputValue: "",
+			searchValue: "",
 			city: "",
-			country: "",
 			errorVisible: false,
 			headerInputClass: "app-start",
-			backgroundClass: ""
+			backgroundClass: "",
+			lat: "",
+			lon: "",
+			weatherCurrent: {},
+			timezoneOffset: ""
 		}
 	}
 
-	// Change state for 'value' as input is typed
+	// Change state for 'searchValue' as input is typed
 	handleInputChange = (event) => {
-		this.setState({value: event.target.value});
+		this.setState({searchValue: event.target.value});
 	}
 
-	handleSubmit = (event) => {
-		event.preventDefault();
-		// Use input value for APi
-		const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.value}&units=metric&appid=${weatherApiKey}`;
-		
-		// Fetch weather data for input value
+	getWeatherData = () => {
+		const weatherURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${this.state.lat}&lon=${this.state.lon}&units=metric&exclude=hourly,minutely&appid=${weatherApiKey.openWeather}`;
+
+		// Fetch weather data
 		fetch(weatherURL)
 			.then(res => res.json())
 			.then(data => {
-				const dailyData = data.list.filter(reading => reading.dt_txt.includes("12:00:00"));
 				console.log(data);
-				this.setState({
-					fullData: data.list,
-					dailyData: dailyData,
-					country: data.city.country,
-					backgroundClass: dailyData[0].weather[0].id,
-					city: this.state.value,
+				this.setState({	
+					backgroundClass: data.current.weather[0].id,
+					city: this.state.searchValue,
 					errorVisible: false,
-					value: "",
-					headerInputClass: "app-in-use"
+					searchValue: "",
+					headerInputClass: "app-in-use",
+					weatherCurrent: data.current,
+					dailyData: data.daily,
+					timezoneOffset: data.timezone_offset
 				}, () => console.log(this.state))
 			})
 			.catch(error => {
 				console.log("error" + error)
 				this.setState({
 					errorVisible: true,
-					fullData: [],
 					dailyData: []
 				})
-			}) 
+			});
+	}
+
+	handleSubmit = (event) => {
+		event.preventDefault();
+
+		// convert city name to coordinates
+		const geocodingURL = `http://api.positionstack.com/v1/forward?access_key=${weatherApiKey.positionStack}&query=${this.state.searchValue}`;
+		// fetch data if a value has been entered, then fetch weather
+		if (this.state.searchValue !== "") {
+			fetch(geocodingURL)
+				.then(res => res.json())
+				.then(data => {
+					this.setState({
+						lat: data.data[0].latitude,
+						lon: data.data[0].longitude
+					}, () => this.getWeatherData())
+				});
+		} else {
+			this.setState({
+				errorVisible: true,
+				dailyData: []
+			});
+		}
+		
 	}
 
 	render() {
 		return (
 		  	<div className={`weather-${this.state.backgroundClass} app`}>
-		  		<div className="app-background"></div>
 			    <header>
 			      <h1 className={`app-title ${this.state.headerInputClass}`}>Weather</h1>
 			    </header>
@@ -71,14 +92,14 @@ class  App extends React.Component {
 			    	<SearchForm 
 			    		handleInputChange={this.handleInputChange}
 			    		handleSubmit={this.handleSubmit}
-			    		value={this.state.value}
+			    		value={this.state.searchValue}
 			    		headerInputClass={this.state.headerInputClass}
 			    		/>
 
-			    	{this.state.dailyData.length > 0 ? <WeatherToday reading={this.state.dailyData[0]} city={this.state.city} country={this.state.country} /> : ""}
+			    	{this.state.dailyData.length > 0 ? <WeatherToday reading={this.state.weatherCurrent} city={this.state.city} /> : ""}
 			   
 		    		<div className="card-container">
-		    			<WeatherForecast forecast={this.state.dailyData.slice(1)}  />
+		    			<WeatherForecast forecast={this.state.dailyData.slice(1,5)} timezoneOffset={this.state.timezoneOffset}  />
 		    		</div>
 
 		    		<ErrorMessage errorVisible={this.state.errorVisible} />

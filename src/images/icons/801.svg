@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="187" height="93" viewBox="0 0 187 93">
-  <g id="Group_8" data-name="Group 8" transform="translate(-134 -187)">
-    <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="33" cy="32.5" rx="33" ry="32.5" transform="translate(222 195)" fill="#fff"/>
-    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="28.5" cy="28" rx="28.5" ry="28" transform="translate(134 215)" fill="#fff"/>
-    <circle id="Ellipse_7" data-name="Ellipse 7" cx="27" cy="27" r="27" transform="translate(267 211)" fill="#fff"/>
-    <ellipse id="Ellipse_9" data-name="Ellipse 9" cx="33" cy="32.5" rx="33" ry="32.5" transform="translate(222 212)" fill="#fff"/>
-    <circle id="Ellipse_6" data-name="Ellipse 6" cx="46.5" cy="46.5" r="46.5" transform="translate(157 187)" fill="#fff"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 187 126.82"><defs><style>.cls-1{fill:#f9ef73;}.cls-2{fill:#fff;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="Layer_2-2" data-name="Layer 2"><g id="Layer_1-2-2" data-name="Layer 1-2"><circle class="cls-1" cx="124.6" cy="51.73" r="51.73"/></g></g><g id="Group_8" data-name="Group 8"><ellipse id="Ellipse_8" data-name="Ellipse 8" class="cls-2" cx="121" cy="74.32" rx="33" ry="32.5"/><ellipse id="Ellipse_1" data-name="Ellipse 1" class="cls-2" cx="28.5" cy="89.82" rx="28.5" ry="28"/><circle id="Ellipse_7" data-name="Ellipse 7" class="cls-2" cx="160" cy="84.82" r="27"/><ellipse id="Ellipse_9" data-name="Ellipse 9" class="cls-2" cx="121" cy="91.32" rx="33" ry="32.5"/><circle id="Ellipse_6" data-name="Ellipse 6" class="cls-2" cx="69.5" cy="80.32" r="46.5"/></g></g></g></svg>
