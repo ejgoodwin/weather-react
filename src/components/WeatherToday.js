@@ -1,6 +1,7 @@
 import React from 'react';
 
 const WeatherToday = (props) => {
+	
 	const weatherIcon = props.reading.weather[0].id;
 	console.log(props);
 	return (
