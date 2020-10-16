@@ -1,6 +1,8 @@
+// TO DO: LAT AND LONG TOO GENEROUS - NO ERROR IF NOT EXACT CITY NAME
+
 import React from 'react';
 import './App.css';
-import weatherApiKey from './apiKeys.js';
+import weatherApiKey from './apiKey.js';
 import SearchForm from './components/SearchForm.js';
 import WeatherToday from './components/WeatherToday.js';
 import WeatherForecast from './components/WeatherForecast.js';
@@ -71,6 +73,13 @@ class  App extends React.Component {
 						lat: data.data[0].latitude,
 						lon: data.data[0].longitude
 					}, () => this.getWeatherData())
+				})
+				.catch(error => {
+					console.log("error" + error)
+					this.setState({
+						errorVisible: true,
+						dailyData: []
+					})
 				});
 		} else {
 			this.setState({
