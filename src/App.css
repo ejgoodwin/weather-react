@@ -96,7 +96,7 @@ body {
     display: -ms-flexbox;
     display: flex; }
   .weather-form__input, .weather-form__submit {
-    padding: .5rem .75rem;
+    padding: .5rem 1.25rem;
     border: none;
     background-color: rgba(255, 255, 255, 0.5); }
   .weather-form__input {
