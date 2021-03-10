@@ -1,4 +1,3 @@
-$peach: #ED9393;
 $white: #fff;
 $grey: #B8B0C1;
 $error-background: #a24848;
@@ -106,7 +105,7 @@ body {
 	}
 	&__input,
 	&__submit {
-		padding: .5rem .75rem;
+		padding: .5rem 1.25rem;
 		border: none;
 		background-color: rgba($white, .5);
 	}
@@ -213,6 +212,20 @@ body {
 		&--capitalize {
 			text-transform: capitalize;
 		}
+	}
+	&__link {
+		align-self: flex-start;
+		border: 1px solid rgba($white, .5);
+		border-radius: 4px;
+		color: $white;
+	    font-size: 14px;
+	    margin-top: 1rem;
+	    padding: .2rem .4rem;
+	    text-decoration: none;
+	    transition: .1s;
+	    &:hover {
+	    	border-color: rgba($white, .8);
+	    }
 	}
 }
 .error-message {

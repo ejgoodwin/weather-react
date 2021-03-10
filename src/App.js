@@ -105,7 +105,7 @@ class  App extends React.Component {
 			    		headerInputClass={this.state.headerInputClass}
 			    		/>
 
-			    	{this.state.dailyData.length > 0 ? <WeatherToday reading={this.state.weatherCurrent} city={this.state.city} /> : ""}
+			    	{this.state.dailyData.length > 0 ? <WeatherToday reading={this.state.weatherCurrent} city={this.state.city} lat={this.state.lat} lon={this.state.lon} /> : ""}
 			   
 		    		<div className="card-container">
 		    			<WeatherForecast forecast={this.state.dailyData.slice(1,5)} timezoneOffset={this.state.timezoneOffset}  />
