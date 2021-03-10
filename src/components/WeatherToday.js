@@ -3,6 +3,7 @@ import React from 'react';
 const WeatherToday = (props) => {
 	
 	const weatherIcon = props.reading.weather[0].id;
+	const mapsLink = `https://maps.google.com/?q=${props.lat},${props.lon}`;
 	console.log(props);
 	return (
 		<div className="weather-today">
@@ -11,6 +12,7 @@ const WeatherToday = (props) => {
 				<p className="weather-today__text weather-today__text--capitalize">{props.city}</p>
 				<p className="weather-today__text">{Math.round(props.reading.temp)}&deg;C</p>
 				{<p className="weather-today__text">{props.reading.weather[0].description}</p>}
+				<a className="weather-today__link" href={mapsLink} target="_blank">Open maps</a>
 			</div>
 			{<i className={weatherIcon}></i>}
 

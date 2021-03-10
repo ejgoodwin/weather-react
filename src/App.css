@@ -206,6 +206,20 @@ body {
     font-weight: 700; }
     .weather-today__text--capitalize {
       text-transform: capitalize; }
+  .weather-today__link {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 1rem;
+    padding: .2rem .4rem;
+    text-decoration: none;
+    transition: .1s; }
+    .weather-today__link:hover {
+      border-color: rgba(255, 255, 255, 0.8); }
 
 .error-message {
   -webkit-flex-grow: 1;
