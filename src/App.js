@@ -93,11 +93,8 @@ class  App extends React.Component {
 	render() {
 		return (
 		  	<div className={`weather-${this.state.backgroundClass} app`}>
-			    <header>
-			      <h1 className={`app-title ${this.state.headerInputClass}`}>Weather</h1>
-			    </header>
-
 			    <div className="main-container">
+			    	<h1 className={`app-title ${this.state.headerInputClass}`}>Weather</h1>
 			    	<SearchForm 
 			    		handleInputChange={this.handleInputChange}
 			    		handleSubmit={this.handleSubmit}

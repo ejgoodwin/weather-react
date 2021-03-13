@@ -1,27 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 377.5 819.6" style="enable-background:new 0 0 377.5 819.6;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#389FE5;}
-	.st1{opacity:0.42;fill:url(#Path_1_1_);enable-background:new    ;}
-	.st2{opacity:0.42;fill:url(#Path_17_1_);enable-background:new    ;}
-</style>
-<g id="Layer_2_1_">
-	<g id="Layer_1-2">
-		<rect class="st0" width="377.5" height="819.6"/>
-		
-			<linearGradient id="Path_1_1_" gradientUnits="userSpaceOnUse" x1="-230.6344" y1="7.228959e-02" x2="-230.9644" y2="0.9323" gradientTransform="matrix(377.51 0 0 819.63 87350.5547 23.9661)">
-			<stop  offset="0" style="stop-color:#97E2FD;stop-opacity:0.4"/>
-			<stop  offset="1" style="stop-color:#6DC8E8;stop-opacity:0.7"/>
-		</linearGradient>
-		<path id="Path_1" class="st1" d="M0,421.7C280.1,347.9,377.5,0,377.5,0v819.6H0V421.7z"/>
-		
-			<linearGradient id="Path_17_1_" gradientUnits="userSpaceOnUse" x1="-230.471" y1="0.4592" x2="-230.891" y2="1.0792" gradientTransform="matrix(377.51 0 0 637.5 87350.5547 28)">
-			<stop  offset="0" style="stop-color:#69FFEE;stop-opacity:0.5"/>
-			<stop  offset="1" style="stop-color:#73F88C;stop-opacity:0.6"/>
-		</linearGradient>
-		<path id="Path_17" class="st2" d="M0,603c280.1-73.8,377.5-412.3,377.5-412.3v628.9H0V603z"/>
-	</g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812">
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h375v812H0z"/>
+    </clipPath>
+    <filter id="b" width="423" height="330.008" x="-24" y="501.992" filterUnits="userSpaceOnUse">
+      <feOffset dy="-4"/>
+      <feGaussianBlur result="blur" stdDeviation="8"/>
+      <feFlood flood-color="#97e5ef" flood-opacity=".251"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g clip-path="url(#a)" data-name="iPhone X/XS/11 Pro – 20">
+    <path fill="#eadef7" d="M0 0h375v812H0z"/>
+    <path fill="#51d5f8" d="M-1 0h376v812H0z" data-name="Path 36"/>
+    <path fill="#4aaca0" d="M0 521c36.026-9.5 44.708-14.644 85-55 10.6-10.614 95.33-71.087 99-72s33.546 15.24 62 11c20.764-4.783 58-37 58-37 24.551 4.357 68.6 40.955 71 41v403H0z" data-name="Path 23" opacity=".64"/>
+    <g filter="url(#b)">
+      <path fill="#32907a" d="M0 590.973c42.6-5.771 22.751-22.345 116-34.842 4-.258 11.707-1.289 20-1.089 4.132-1.036 30.636 1.625 40-2.178 3.3 1.488 29.518-5.52 30-5.444.474-.022 21.46.374 23-1.089 8.266-2.7 19.371.4 28-4.355 18.089-8.226 53.278-11.6 58-11.977s59.536 11.969 60 11.977v270.023H0z" data-name="Path 26"/>
+    </g>
+    <path fill="#62ccd0" d="M306.678 371.512s31.953 34.44 48.212 73.508a214.142 214.142 0 0021.132 39.356l.063-64.399c-11.744-2.877-44.033-42.2-69.407-48.465z" data-name="Path 37"/>
+    <path fill="#62ccd0" d="M184.999 396.277s22.112 16.62 34.393 31.958 18.785 26.867 29.613 45.42-15.05-34.325-12.54-43.808c.082-.53 6.507-3.699 16.688 18.22 0 0-1.107-10.839-10.361-24.052s-24.062-14.567-24.274-14.798c4.202 7.904 5.81 12.444 4.426 11.198-12.222-10.991-28.171-20.164-37.945-24.138z" data-name="Path 38"/>
+    <ellipse cx="1.5" cy="2" fill="#d0f5ff" data-name="Ellipse 11" opacity=".373" rx="1.5" ry="2" transform="translate(81 535)"/>
+    <ellipse cx="2.5" cy="2" fill="#d0f5ff" data-name="Ellipse 12" opacity=".373" rx="2.5" ry="2" transform="translate(76 531)"/>
+    <g fill="#32907a" data-name="Group 16">
+      <path d="M51 561c.786 0 1.038.837 1.038 1.607S51.786 564 51 564a1.264 1.264 0 01-1.247-1.393c0-.77.462-1.607 1.247-1.607z" data-name="Path 35"/>
+      <path d="M51.468 567.106c.998-.194.812 4.768.202 4.775s-1.204-4.58-.202-4.775z" data-name="Path 32"/>
+      <path d="M50.616 567.112c1.015-.035.056 4.834-.547 4.746s-.473-4.71.547-4.746z" data-name="Path 34"/>
+      <path d="M51 563c1.016 0 2.1 4.292 1 6-3.168-.522-2 0-2 0-1.444-1.376-.016-6 1-6z" data-name="Path 30"/>
+    </g>
+    <g fill="#32907a" data-name="Group 15">
+      <path d="M79 547h22v16H79z" data-name="Rectangle 10"/>
+      <path d="M90 536l15 14H75z" data-name="Path 29"/>
+      <path d="M83 540h2v3h-2z" data-name="Rectangle 11"/>
+      <path d="M84 556h3v6h-3z" data-name="Rectangle 12"/>
+    </g>
+    <g fill="#32907a" data-name="Group 12">
+      <path d="M301 517.001h5s-1.586 11.154 0 16-7.079 4.811-5 0 0-16 0-16z" data-name="Path 27"/>
+      <path d="M304 510s5 7.462 5 10-5 5-5 5-6-2.462-6-5 6-10 6-10z" data-name="Path 28"/>
+    </g>
+    <g fill="#32907a" data-name="Group 13">
+      <path d="M322 512h7s-1.987 13.929 0 20-9.6 6.028-7 0 0-20 0-20z" data-name="Path 27"/>
+      <path d="M325 503s7 9.82 7 13-7 6-7 6-7-2.82-7-6 7-13 7-13z" data-name="Path 28"/>
+    </g>
+    <g data-name="Group 22">
+      <path fill="#f2718a" d="M46.506 443c-.005-3.34.994-7.974 8-8s6.83 5.938 6.81 8c.014 3.937-4.81 11-4.81 11h-5s-4.995-7.66-5-11z" data-name="Path 48"/>
+      <path fill="#9a7f6b" d="M51.427 455h5.159l-.859 4h-3.441z" data-name="Path 50"/>
+      <path fill="#fddc92" d="M52.661 435.12s-3.673 7.542 1.021 18.884h.711a26.159 26.159 0 00.958-19 13.8 13.8 0 00-2.69.116z" data-name="Path 49"/>
+    </g>
+  </g>
 </svg>
