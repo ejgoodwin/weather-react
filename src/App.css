@@ -24,31 +24,47 @@ body {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: .75rem;
   height: 100%;
-  background: #ab87fd;
-  background: linear-gradient(0deg, #ab87fd 0%, #919aff 61%);
+  background: #ccb6ff;
+  background: linear-gradient(0deg, #ccb6ff 0%, #babfff 100%);
   background-size: cover;
   background-position: center; }
   .app[class^="weather-2"] {
-    background-image: url("images/bg-thunder.svg"); }
+    background-image: url("images/rain-blur.png"); }
+    .app[class^="weather-2"] .main-container {
+      background-image: url("images/bg-rain.svg"); }
   .app[class^="weather-3"] {
-    background-image: url("images/bg-rain.svg"); }
+    background-image: url("images/rain-blur.png"); }
+    .app[class^="weather-3"] .main-container {
+      background-image: url("images/bg-rain.svg"); }
   .app[class^="weather-5"] {
-    background-image: url("images/bg-rain.svg"); }
+    background-image: url("images/rain-blur.png"); }
+    .app[class^="weather-5"] .main-container {
+      background-image: url("images/bg-rain.svg"); }
   .app[class^="weather-6"] {
-    background-image: url("images/bg-cloudy.svg"); }
+    background-image: url("images/cloudy-blur.png"); }
+    .app[class^="weather-6"] .main-container {
+      background-image: url("images/bg-cloudy.svg"); }
   .app[class^="weather-7"] {
-    background-image: url("images/bg-cloudy.svg"); }
-  .app[class^="weather-8"] {
-    background-image: url("images/bg-cloudy.svg"); }
+    background-image: url("images/cloudy-blur.png"); }
+    .app[class^="weather-7"] .main-container {
+      background-image: url("images/bg-cloudy.svg"); }
+  .app.weather-801, .app.weather-802 {
+    background-image: url("images/partly-cloudy-blur.png"); }
+    .app.weather-801 .main-container, .app.weather-802 .main-container {
+      background-image: url("images/bg-partly-cloudy.svg"); }
+  .app.weather-803, .app.weather-804 {
+    background-image: url("images/partly-cloudy-blur.png"); }
+    .app.weather-803 .main-container, .app.weather-804 .main-container {
+      background-image: url("images/bg-partly-cloudy.svg"); }
   .app.weather-800 {
-    background-image: url("images/bg-sunny.svg");
-    background-size: cover;
-    background-position: center; }
+    background-image: url("images/sunny-blur.png"); }
+    .app.weather-800 .main-container {
+      background-image: url("images/bg-sunny.svg"); }
 
 .app-title {
   text-align: center;
@@ -60,19 +76,25 @@ body {
     font-size: 2rem; }
 
 .main-container {
+  background: #ab87fd;
+  background: linear-gradient(0deg, #ab87fd 0%, #919aff 61%);
+  background-size: cover;
+  background-position: center;
+  border-radius: .5rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-bottom: 1rem;
+  max-height: 800px;
+  max-width: 400px;
+  padding: 1rem;
   z-index: 1; }
   @media screen and (min-width: 620px) {
     .main-container {
@@ -143,7 +165,7 @@ body {
 
 .custom-icon {
   height: 120px;
-  width: 150px;
+  width: 100px;
   margin-left: auto;
   background-repeat: no-repeat;
   background-size: contain;
@@ -189,9 +211,7 @@ body {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    padding-top: 3rem;
     width: 50%; }
   .weather-today__icon {
     padding-top: 3rem;
