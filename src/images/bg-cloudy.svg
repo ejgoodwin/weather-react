@@ -1,9 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812">
   <defs>
+    <linearGradient id="b" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#859ea5"/>
+      <stop offset="1" stop-color="#b8d2d9"/>
+    </linearGradient>
     <clipPath id="a">
       <path d="M0 0h375v812H0z"/>
     </clipPath>
-    <filter id="b" width="423" height="330.008" x="-24" y="501.992" filterUnits="userSpaceOnUse">
+    <filter id="c" width="423" height="330.008" x="-24" y="501.992" filterUnits="userSpaceOnUse">
       <feOffset dy="-4"/>
       <feGaussianBlur result="blur" stdDeviation="8"/>
       <feFlood flood-color="#97e5ef" flood-opacity=".251"/>
@@ -13,9 +17,9 @@
   </defs>
   <g clip-path="url(#a)" data-name="iPhone X/XS/11 Pro – 22">
     <path fill="#eadef7" d="M0 0h375v812H0z"/>
-    <path fill="#acc9d1" d="M-1 0h376v812H0z" data-name="Path 36"/>
+    <path fill="url(#b)" d="M10 0h376v812H11z" data-name="Path 61" transform="translate(-11)"/>
     <path fill="#7eb1c1" d="M0 521c36.026-9.5 44.708-14.644 85-55 10.6-10.614 95.33-71.087 99-72s33.546 15.24 62 11c20.764-4.783 58-37 58-37 24.551 4.357 68.6 40.955 71 41v403H0z" data-name="Path 23"/>
-    <g filter="url(#b)">
+    <g filter="url(#c)">
       <path fill="#528695" d="M0 590.973c42.6-5.771 22.751-22.345 116-34.842 4-.258 11.707-1.289 20-1.089 4.132-1.036 30.636 1.625 40-2.178 3.3 1.488 29.518-5.52 30-5.444.474-.022 21.46.374 23-1.089 8.266-2.7 19.371.4 28-4.355 18.089-8.226 53.278-11.6 58-11.977s59.536 11.969 60 11.977v270.023H0z" data-name="Path 26"/>
     </g>
     <path fill="#91c2d1" d="M306.678 371.512s31.953 34.44 48.212 73.508a214.142 214.142 0 0021.132 39.356l.063-64.399c-11.744-2.877-44.033-42.2-69.407-48.465z" data-name="Path 37"/>
