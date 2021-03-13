@@ -14,7 +14,6 @@ const WeatherToday = (props) => {
 				<p className="weather-today__text">{props.reading.weather[0].description}</p>
 				<a className="weather-today__link" href={mapsLink} target="_blank">Open maps</a>
 			</div>
-			{<i className={weatherIcon}></i>}
 
 			<div className="weather-today__icon">
 				{<div className={`icon-${weatherIcon} custom-icon`}></div>}

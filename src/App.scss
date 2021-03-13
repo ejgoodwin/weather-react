@@ -166,12 +166,12 @@ body {
 	margin: .25rem;
 	width: 25%;
 	text-align: center;
-	background: rgba($card-color, .3);
+	background: rgba($white, .2);
 	border-radius: 4px;
 	box-shadow: 0px 3px 6px rgba(#000, .1);
 	&__day {
 		font-size: .75rem;
-		color: rgba($white, .5);
+		color: $white;
 		text-transform: uppercase;
 		font-weight: 700;
 	}
