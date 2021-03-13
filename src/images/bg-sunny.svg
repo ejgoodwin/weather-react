@@ -1,9 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812">
   <defs>
+    <linearGradient id="b" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#24c0eb"/>
+      <stop offset="1" stop-color="#c8ebf4"/>
+    </linearGradient>
     <clipPath id="a">
       <path d="M0 0h375v812H0z"/>
     </clipPath>
-    <filter id="b" width="423" height="330.008" x="-24" y="501.992" filterUnits="userSpaceOnUse">
+    <filter id="c" width="423" height="330.008" x="-24" y="501.992" filterUnits="userSpaceOnUse">
       <feOffset dy="-4"/>
       <feGaussianBlur result="blur" stdDeviation="8"/>
       <feFlood flood-color="#97e5ef" flood-opacity=".251"/>
@@ -13,9 +17,9 @@
   </defs>
   <g clip-path="url(#a)" data-name="iPhone X/XS/11 Pro – 20">
     <path fill="#eadef7" d="M0 0h375v812H0z"/>
-    <path fill="#51d5f8" d="M-1 0h376v812H0z" data-name="Path 36"/>
+    <path fill="url(#b)" d="M0 0h375v812H0z" data-name="Rectangle 22"/>
     <path fill="#4aaca0" d="M0 521c36.026-9.5 44.708-14.644 85-55 10.6-10.614 95.33-71.087 99-72s33.546 15.24 62 11c20.764-4.783 58-37 58-37 24.551 4.357 68.6 40.955 71 41v403H0z" data-name="Path 23" opacity=".64"/>
-    <g filter="url(#b)">
+    <g filter="url(#c)">
       <path fill="#32907a" d="M0 590.973c42.6-5.771 22.751-22.345 116-34.842 4-.258 11.707-1.289 20-1.089 4.132-1.036 30.636 1.625 40-2.178 3.3 1.488 29.518-5.52 30-5.444.474-.022 21.46.374 23-1.089 8.266-2.7 19.371.4 28-4.355 18.089-8.226 53.278-11.6 58-11.977s59.536 11.969 60 11.977v270.023H0z" data-name="Path 26"/>
     </g>
     <path fill="#62ccd0" d="M306.678 371.512s31.953 34.44 48.212 73.508a214.142 214.142 0 0021.132 39.356l.063-64.399c-11.744-2.877-44.033-42.2-69.407-48.465z" data-name="Path 37"/>
@@ -43,9 +47,14 @@
       <path d="M325 503s7 9.82 7 13-7 6-7 6-7-2.82-7-6 7-13 7-13z" data-name="Path 28"/>
     </g>
     <g data-name="Group 22">
-      <path fill="#f2718a" d="M46.506 443c-.005-3.34.994-7.974 8-8s6.83 5.938 6.81 8c.014 3.937-4.81 11-4.81 11h-5s-4.995-7.66-5-11z" data-name="Path 48"/>
+      <path fill="#c67f7f" d="M46.506 443c-.005-3.34.994-7.974 8-8s6.83 5.938 6.81 8c.014 3.937-4.81 11-4.81 11h-5s-4.995-7.66-5-11z" data-name="Path 48"/>
       <path fill="#9a7f6b" d="M51.427 455h5.159l-.859 4h-3.441z" data-name="Path 50"/>
-      <path fill="#fddc92" d="M52.661 435.12s-3.673 7.542 1.021 18.884h.711a26.159 26.159 0 00.958-19 13.8 13.8 0 00-2.69.116z" data-name="Path 49"/>
+      <path fill="#f7e1b0" d="M52.661 435.12s-3.673 7.542 1.021 18.884h.711a26.159 26.159 0 00.958-19 13.8 13.8 0 00-2.69.116z" data-name="Path 49"/>
+    </g>
+    <g data-name="Group 91">
+      <path fill="#c67f7f" d="M46.506 443c-.005-3.34.994-7.974 8-8s6.83 5.938 6.81 8c.014 3.937-4.81 11-4.81 11h-5s-4.995-7.66-5-11z" data-name="Path 48"/>
+      <path fill="#9a7f6b" d="M51.427 455h5.159l-.859 4h-3.441z" data-name="Path 50"/>
+      <path fill="#f7e1b0" d="M52.661 435.12s-3.673 7.542 1.021 18.884h.711a26.159 26.159 0 00.958-19 13.8 13.8 0 00-2.69.116z" data-name="Path 49"/>
     </g>
   </g>
 </svg>
