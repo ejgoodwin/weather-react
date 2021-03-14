@@ -12,7 +12,7 @@ const WeatherToday = (props) => {
 				<p className="weather-today__text weather-today__text--capitalize">{props.city}</p>
 				<p className="weather-today__text">{Math.round(props.reading.temp)}&deg;C</p>
 				<p className="weather-today__text">{props.reading.weather[0].description}</p>
-				<a className="weather-today__link" href={mapsLink} target="_blank">Open maps</a>
+				<a className="weather-today__link" href={mapsLink} target="_blank" rel="noopener noreferrer">Open maps</a>
 			</div>
 
 			<div className="weather-today__icon">
