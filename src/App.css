@@ -57,9 +57,9 @@ body {
     .app.weather-801 .main-container, .app.weather-802 .main-container {
       background-image: url("images/bg-partly-cloudy.svg"); }
   .app.weather-803, .app.weather-804 {
-    background-image: url("images/partly-cloudy-blur.png"); }
+    background-image: url("images/cloudy-blur.png"); }
     .app.weather-803 .main-container, .app.weather-804 .main-container {
-      background-image: url("images/bg-partly-cloudy.svg"); }
+      background-image: url("images/bg-cloudy.svg"); }
   .app.weather-800 {
     background-image: url("images/sunny-blur.png"); }
     .app.weather-800 .main-container {
