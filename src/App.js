@@ -1,5 +1,3 @@
-// TO DO: LAT AND LONG TOO GENEROUS - NO ERROR IF NOT EXACT CITY NAME
-
 import React from 'react';
 import './App.css';
 import weatherApiKey from './apiKey.js';
