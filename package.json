@@ -7,7 +7,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "acorn": "^8.1.0",
-    "immer": "^8.0.1",
+    "immer": "^9.0.6",
     "react": "^17.0.1",
     "react-dev-utils": "^11.0.4",
     "react-dom": "^17.0.1",
