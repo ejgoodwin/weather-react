@@ -83,8 +83,7 @@ body {
 			background-image: url('images/bg-sunny.svg');
 		}
 	}
-
-	@media screen and (min-width: 424px) {
+	@media screen and (min-width: 620px) {
 		padding: .75rem;
 	}
 }
@@ -103,20 +102,17 @@ body {
 	background: rgb(171,135,253);
 	background: linear-gradient(0deg, rgba(171,135,253,1) 0%, rgba(145,154,255,1) 61%);
 	background-size: cover;
-	background-position: center;
+	background-position: 0 70%;
 	box-shadow: 0px 3px 6px rgba(#000, .1);
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	margin: 0;	
-	max-width: 400px;
 	padding: 1rem;
 	z-index: 1;
-	@media screen and (min-width: 400px) {
-		border-radius: .5rem;
-		margin: auto;
-		max-height: 800px;
-		width: 400px;
+	@media screen and (min-width: 620px) {
+		border-radius: .5rem;		
+		margin: 0 auto;
+		width: 600px;
 	}
 }
 .weather-form {
@@ -152,6 +148,7 @@ body {
 		flex-grow: 1;
 		border-top-left-radius: 30px;
 		border-bottom-left-radius: 30px;
+		width: 100%;
 	}
 	&__submit {
 		border-top-right-radius: 30px;
@@ -169,12 +166,12 @@ body {
 	margin: .25rem;
 	width: 25%;
 	text-align: center;
-	background: rgba($white, .2);
+	background: rgba(white, .1);
 	border-radius: 4px;
 	box-shadow: 0px 3px 6px rgba(#000, .1);
 	&__day {
 		font-size: .75rem;
-		color: $white;
+		color: white;
 		text-transform: uppercase;
 		font-weight: 700;
 	}
@@ -197,6 +194,9 @@ body {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: top;
+	@media screen and (min-width: 620px) {
+		width: 150px;
+	}
 }
 // Icons
 [class^="icon-2"] {
@@ -277,6 +277,3 @@ body {
 		text-align: center;
 	}
 }
-
-
-

@@ -11,8 +11,8 @@ const DayCard = (props) => {
 	return (
 		<div className="card">
 			<p className="card__day"> {day}</p>
-			<p className="card__temp">{Math.round(props.reading.temp.max)}&deg;C</p>
 			<div className={`icon-${weatherIcon} card__icon`}></div>
+			<p className="card__temp">{Math.round(props.reading.temp.max)}&deg;C</p>
 		</div>
 	)
 }
