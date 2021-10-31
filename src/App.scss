@@ -72,9 +72,9 @@ body {
 	}
 	&.weather-803,
 	&.weather-804 {
-		background-image: url('images/partly-cloudy-blur.png');
+		background-image: url('images/cloudy-blur.png');
 		.main-container {
-			background-image: url('images/bg-partly-cloudy.svg');
+			background-image: url('images/bg-cloudy.svg');
 		}
 	}
 	&.weather-800 {
@@ -119,7 +119,7 @@ body {
 	transition: .2s;
 	&.app-start {
 		.weather-form__input {
-			font-size: 1.5rem;
+			font-size: 1rem;
 		}
 	}
 	&.app-in-use {
@@ -277,6 +277,3 @@ body {
 		text-align: center;
 	}
 }
-
-
-

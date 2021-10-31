@@ -79,10 +79,10 @@ body {
   background-image: url("images/bg-partly-cloudy.svg");
 }
 .app.weather-803, .app.weather-804 {
-  background-image: url("images/partly-cloudy-blur.png");
+  background-image: url("images/cloudy-blur.png");
 }
 .app.weather-803 .main-container, .app.weather-804 .main-container {
-  background-image: url("images/bg-partly-cloudy.svg");
+  background-image: url("images/bg-cloudy.svg");
 }
 .app.weather-800 {
   background-image: url("images/sunny-blur.png");
@@ -146,7 +146,7 @@ body {
   transition: 0.2s;
 }
 .weather-form.app-start .weather-form__input {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .weather-form.app-in-use .weather-form__input {
   font-size: 1rem;

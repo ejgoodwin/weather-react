@@ -2,6 +2,11 @@
 
 ![Designs](src/images/readme-image.png)
 
+Uses APIs from:
+
+* [https://openweathermap.org/](https://openweathermap.org/)
+* [https://positionstack.com/](https://positionstack.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

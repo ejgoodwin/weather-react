@@ -6,7 +6,7 @@ const DayCard = (props) => {
 	// get date using timestamp and timezone offset
 	const daysArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	const date = new Date((props.reading.dt + props.timezoneOffset) * 1000);
-	const day = daysArr[date.getUTCDay()]
+	const day = daysArr[date.getUTCDay()];
 
 	return (
 		<div className="card">
